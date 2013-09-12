@@ -3,6 +3,16 @@ node-msg
 
 Node message formatter
 
+
+Install
+-------
+
+	npm install node-msg
+
+	
+Usage
+-----
+
 **testjs**
 ````javascript
 	var Msg = require('node-msg');
