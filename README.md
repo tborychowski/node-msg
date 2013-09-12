@@ -4,6 +4,7 @@ node-msg
 Node message formatter
 
 **testjs**
+
 	var Msg = require('node-msg');
 
 	Msg.beep(2);
