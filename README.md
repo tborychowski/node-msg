@@ -4,7 +4,7 @@ node-msg
 Node message formatter
 
 **testjs**
-
+````javascript
 	var Msg = require('node-msg');
 
 	Msg.beep(2);
@@ -48,7 +48,7 @@ Node message formatter
 		[ '9', 'String 9', '90 KB' ],
 		[ '10', 'String 10 is the longest', '100 KB' ],
 	]);
-
+````
 
 
 **Output**
