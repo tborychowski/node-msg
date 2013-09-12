@@ -1,4 +1,4 @@
 node-msg
 ========
 
-node message formatter
+Node message formatter
