@@ -13,7 +13,7 @@ Install
 Usage
 -----
 
-**testjs**
+**test.js**
 ````javascript
 	var Msg = require('node-msg');
 
