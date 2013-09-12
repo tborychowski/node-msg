@@ -13,7 +13,7 @@ var MSG = {
 	white   : function (msg) { return '\x1B[37m' + msg + '\x1B[39m';  },
 
 	log     : function (msg) { console.log('' + msg);                 },
-	success : function (msg) { console.error(MSG.magenta('' + msg)); },
+	success : function (msg) { console.error(MSG.cyan('' + msg)); },
 	error   : function (msg) {
 		if (typeof msg === 'object') msg = msg.message || msg.msg || msg.toString();
 		console.error(MSG.red('' + msg));
