@@ -13,7 +13,7 @@ var MSG = {
 	white   : function (msg) { return '\x1B[37m' + msg + '\x1B[39m';  },
 
 	log     : function (msg) { console.log('' + msg);                 },
-	success : function (msg) { console.error(MSG.cyan('' + msg)); },
+	success : function (msg) { console.log(MSG.cyan('' + msg)); },
 	error   : function (msg) {
 		if (typeof msg === 'object') msg = msg.message || msg.msg || msg.toString();
 		console.error(MSG.red('' + msg));
@@ -63,6 +63,9 @@ var MSG = {
 
 		// SORT
 		if (typeof sort !== 'undefined') {
+			if (sort < 0) sort = 0;
+			if (sort > data[1].length - 1) sort = data[1].length - 1;
+
 			// compare as int
 			if (_isNumber(data[1][sort])) {
 				if (_ascSort) data.sort(function (a, b) { return parseFloat(a[sort]) - parseFloat(b[sort]); });
