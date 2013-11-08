@@ -1,0 +1,151 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.18
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\Tom\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose tar pack [ 'C:\\Users\\Tom\\AppData\\Local\\Temp\\npm-5568-junEJyBk\\1383907421714-0.9756511724554002\\tmp.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+13 verbose folder .
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. C:\Users\Tom\AppData\Roaming\npm-cache\1f1177db-tar.lock
+16 silly lockFile bedd29fb-21714-0-9756511724554002-tmp-tgz tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+17 verbose lock tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz C:\Users\Tom\AppData\Roaming\npm-cache\bedd29fb-21714-0-9756511724554002-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile bedd29fb-21714-0-9756511724554002-tmp-tgz tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+21 silly lockFile bedd29fb-21714-0-9756511724554002-tmp-tgz tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+22 verbose tar unpack C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+23 silly lockFile 0cb2dd8a-21714-0-9756511724554002-package tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package
+24 verbose lock tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package C:\Users\Tom\AppData\Roaming\npm-cache\0cb2dd8a-21714-0-9756511724554002-package.lock
+25 silly lockFile bedd29fb-21714-0-9756511724554002-tmp-tgz tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+26 verbose lock tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz C:\Users\Tom\AppData\Roaming\npm-cache\bedd29fb-21714-0-9756511724554002-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+30 silly gunzTarPerm extractEntry .npmignore
+31 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+34 silly gunzTarPerm extractEntry LICENSE
+35 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+36 silly gunzTarPerm extractEntry node-msg.js
+37 silly gunzTarPerm modified mode [ 'node-msg.js', 438, 420 ]
+38 silly gunzTarPerm extractEntry test.js
+39 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+40 silly gunzTarPerm extractEntry sample-output.png
+41 silly gunzTarPerm modified mode [ 'sample-output.png', 438, 420 ]
+42 silly lockFile 0cb2dd8a-21714-0-9756511724554002-package tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package
+43 silly lockFile 0cb2dd8a-21714-0-9756511724554002-package tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package
+44 silly lockFile bedd29fb-21714-0-9756511724554002-tmp-tgz tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+45 silly lockFile bedd29fb-21714-0-9756511724554002-tmp-tgz tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\tmp.tgz
+46 verbose tar pack [ 'C:\\Users\\Tom\\AppData\\Roaming\\npm-cache\\node-msg\\1.1.2\\package.tgz',
+46 verbose tar pack   'C:\\Users\\Tom\\AppData\\Local\\Temp\\npm-5568-junEJyBk\\1383907421714-0.9756511724554002\\package' ]
+47 verbose tarball C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+48 verbose folder C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package
+49 silly lockFile 0cb2dd8a-21714-0-9756511724554002-package tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package
+50 verbose lock tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package C:\Users\Tom\AppData\Roaming\npm-cache\0cb2dd8a-21714-0-9756511724554002-package.lock
+51 silly lockFile 0c49487e-cache-node-msg-1-1-2-package-tgz tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+52 verbose lock tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz C:\Users\Tom\AppData\Roaming\npm-cache\0c49487e-cache-node-msg-1-1-2-package-tgz.lock
+53 silly lockFile 0cb2dd8a-21714-0-9756511724554002-package tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package
+54 silly lockFile 0cb2dd8a-21714-0-9756511724554002-package tar://C:\Users\Tom\AppData\Local\Temp\npm-5568-junEJyBk\1383907421714-0.9756511724554002\package
+55 silly lockFile 0c49487e-cache-node-msg-1-1-2-package-tgz tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+56 silly lockFile 0c49487e-cache-node-msg-1-1-2-package-tgz tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+57 silly lockFile edb895f6-npm-cache-node-msg-1-1-2-package C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package
+58 verbose lock C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package C:\Users\Tom\AppData\Roaming\npm-cache\edb895f6-npm-cache-node-msg-1-1-2-package.lock
+59 silly lockFile edb895f6-npm-cache-node-msg-1-1-2-package C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package
+60 silly lockFile edb895f6-npm-cache-node-msg-1-1-2-package C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package
+61 verbose tar unpack C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+62 silly lockFile 1d9341f3-npm-cache-node-msg-1-1-2-package tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package
+63 verbose lock tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package C:\Users\Tom\AppData\Roaming\npm-cache\1d9341f3-npm-cache-node-msg-1-1-2-package.lock
+64 silly lockFile 0c49487e-cache-node-msg-1-1-2-package-tgz tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+65 verbose lock tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz C:\Users\Tom\AppData\Roaming\npm-cache\0c49487e-cache-node-msg-1-1-2-package-tgz.lock
+66 silly gunzTarPerm modes [ '755', '644' ]
+67 silly gunzTarPerm extractEntry package.json
+68 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+69 silly gunzTarPerm extractEntry .npmignore
+70 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+71 silly gunzTarPerm extractEntry README.md
+72 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+73 silly gunzTarPerm extractEntry LICENSE
+74 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+75 silly gunzTarPerm extractEntry node-msg.js
+76 silly gunzTarPerm modified mode [ 'node-msg.js', 438, 420 ]
+77 silly gunzTarPerm extractEntry test.js
+78 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+79 silly gunzTarPerm extractEntry sample-output.png
+80 silly gunzTarPerm modified mode [ 'sample-output.png', 438, 420 ]
+81 silly lockFile 1d9341f3-npm-cache-node-msg-1-1-2-package tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package
+82 silly lockFile 1d9341f3-npm-cache-node-msg-1-1-2-package tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package
+83 silly lockFile 0c49487e-cache-node-msg-1-1-2-package-tgz tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+84 silly lockFile 0c49487e-cache-node-msg-1-1-2-package-tgz tar://C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+85 verbose chmod C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz 644
+86 silly chown skipping for windows C:\Users\Tom\AppData\Roaming\npm-cache\node-msg\1.1.2\package.tgz
+87 silly lockFile 3a52ce78- .
+88 silly lockFile 3a52ce78- .
+89 silly publish { name: 'node-msg',
+89 silly publish   version: '1.1.2',
+89 silly publish   description: 'node msg logger/formatter with colours',
+89 silly publish   author: { name: 'Tom' },
+89 silly publish   main: 'node-msg',
+89 silly publish   dependencies: {},
+89 silly publish   engines: { node: '>=0.8.0' },
+89 silly publish   keywords: [ 'log', 'msg', 'message', 'formatter' ],
+89 silly publish   licenses:
+89 silly publish    [ { type: 'MIT',
+89 silly publish        url: 'https://raw.github.com/tborychowski/node-msg/master/LICENSE' } ],
+89 silly publish   repository:
+89 silly publish    { type: 'git',
+89 silly publish      url: 'https://github.com/tborychowski/node-msg.git' },
+89 silly publish   readme: 'node-msg\r\n========\r\n\r\nNode message formatter\r\n\r\n\r\nInstall\r\n-------\r\n\r\n\tnpm install node-msg\r\n\r\n\t\r\nUsage\r\n-----\r\n\r\n**test.js**\r\n````javascript\r\n\tvar Msg = require(\'node-msg\');\r\n\r\n\tMsg.beep(2);\r\n\tMsg.log(\'This is a double beep!\\n\');\r\n\r\n\tMsg.error(\'This is error\');\r\n\tMsg.success(\'This is success message\');\r\n\r\n\tMsg.log(\r\n\t\tMsg.blue(\'\\nThis is blue text\') + \', \' +\r\n\t\tMsg.cyan(\'\\nThis is cyan text\') + \', \' +\r\n\t\tMsg.green(\'\\nThis is green text\') + \', \' +\r\n\t\tMsg.grey(\'\\nThis is grey text\') + \', \' +\r\n\t\tMsg.magenta(\'\\nThis is magenta text\') + \', \' +\r\n\t\tMsg.red(\'\\nThis is red text\') + \', \' +\r\n\t\tMsg.yellow(\'\\nThis is yellow text\') + \', \' +\r\n\t\tMsg.white(\'\\nThis is white text\') + \', \' +\r\n\r\n\t\tMsg.paint(\'\\n\\nThis is bold blue text\', \'bold blue\') + \', \' +\r\n\t\tMsg.paint(\'\\nThis is bold cyan text\', \'bold cyan\') + \', \' +\r\n\t\tMsg.paint(\'\\nThis is bold green text\', \'bold green\') + \', \' +\r\n\t\tMsg.paint(\'\\nThis is bold grey text\', \'bold grey\') + \', \' +\r\n\t\tMsg.paint(\'\\nThis is bold magenta text\', \'bold magenta\') + \', \' +\r\n\t\tMsg.paint(\'\\nThis is bold red text\', \'bold red\') + \', \' +\r\n\t\tMsg.paint(\'\\nThis is bold yellow text\', \'bold yellow\') + \', \' +\r\n\t\tMsg.paint(\'\\nThis is bold white text\', \'bold white\')\r\n\t);\r\n\r\n\tMsg.log(\'\\n\\nAnd this is a table:\\n\');\r\n\r\n\tMsg.table([\r\n\t\t[ \'ID\', \'String\', \'Size\' ],\r\n\t\t[ \'1\', \'String 1\', \'10 KB\' ],\r\n\t\t[ \'2\', \'String 2\', \'20 KB\' ],\r\n\t\t[ \'3\', \'String 3\', \'30 KB\' ],\r\n\t\t[ \'4\', \'String 4\', \'40 KB\' ],\r\n\t\t[ \'5\', \'String 5\', \'50 KB\' ],\r\n\t\t[ \'6\', \'String 6\', \'60 KB\' ],\r\n\t\t[ \'7\', \'String 7\', \'70 KB\' ],\r\n\t\t[ \'8\', \'String 8\', \'80 KB\' ],\r\n\t\t[ \'9\', \'String 9\', \'90 KB\' ],\r\n\t\t[ \'10\', \'String 10 is the longest\', \'100 KB\' ],\r\n\t]);\r\n````\r\n\r\n\r\n**Output**\r\n\r\n![sample-output](https://github.com/tborychowski/node-msg/raw/master/sample-output.png "Sample output")\r\n',
+89 silly publish   readmeFilename: 'README.md',
+89 silly publish   bugs: { url: 'https://github.com/tborychowski/node-msg/issues' },
+89 silly publish   _id: 'node-msg@1.1.2',
+89 silly publish   dist: { shasum: 'da6a8c5140d0c6321ba4760f457267cb2c3964cd' },
+89 silly publish   _from: '.' }
+90 verbose url raw node-msg
+91 verbose url resolving [ 'https://registry.npmjs.org/', './node-msg' ]
+92 verbose url resolved https://registry.npmjs.org/node-msg
+93 info trying registry request attempt 1 at 10:43:43
+94 http PUT https://registry.npmjs.org/node-msg
+95 http 409 https://registry.npmjs.org/node-msg
+96 verbose url raw node-msg
+97 verbose url resolving [ 'https://registry.npmjs.org/', './node-msg' ]
+98 verbose url resolved https://registry.npmjs.org/node-msg
+99 info trying registry request attempt 1 at 10:43:44
+100 http GET https://registry.npmjs.org/node-msg
+101 http 200 https://registry.npmjs.org/node-msg
+102 error publish fail Cannot publish over existing version.
+102 error publish fail Update the 'version' field in package.json and try again.
+102 error publish fail
+102 error publish fail If the previous version was published in error, see:
+102 error publish fail     npm help unpublish
+102 error publish fail
+102 error publish fail To automatically increment version numbers, see:
+102 error publish fail     npm help version
+103 error System Windows_NT 6.1.7601
+104 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+105 error cwd D:\Projects\_mini_projects\node-modules\node-msg
+106 error node -v v0.10.18
+107 error npm -v 1.3.8
+108 error code EPUBLISHCONFLICT
+109 verbose exit [ 1, true ]
