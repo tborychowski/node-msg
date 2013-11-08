@@ -92,9 +92,9 @@ var MSG = {
 		data.forEach(function (row) {
 			row.forEach(function (cell, idx) {
 				if (!_columnLengths[idx]) _columnLengths[idx] = _colPadding;
-				// column padding is ~30% greater than the widest cell
-				var cellLen = cell.toString().length;
-				_columnLengths[idx] = Math.max(_columnLengths[idx], cellLen + Math.ceil(0.3 * cellLen));
+				// column padding is ~30% greater than the widest cell (but max 4 spaces)
+				var cellLen = cell.toString().length, pad = Math.min(4, Math.ceil(0.3 * cellLen));
+				_columnLengths[idx] = Math.max(_columnLengths[idx], cellLen + pad);
 			});
 		});
 
