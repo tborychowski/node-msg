@@ -43,3 +43,6 @@ Msg.table([
 	[ '9', 'String 9', '90 KB' ],
 	[ '10', 'String 10 is the longest', '100 KB' ],
 ]);
+
+var loader = new Msg.loading('Loading');
+setTimeout(function () { loader.stop('....OK'); }, 2000);

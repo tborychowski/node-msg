@@ -1,5 +1,5 @@
 /*global module, console, process */
-
+// jshint -W084
 var MSG = {
 	black   : function (msg) { return '\x1B[30m' + msg + '\x1B[39m';  },
 	blue    : function (msg) { return '\x1B[34m' + msg + '\x1B[39m';  },
@@ -30,6 +30,35 @@ var MSG = {
 	beep    : function (times) {
 		times = times || 1;
 		while (times--) process.stdout.write('\x07');
+	},
+
+	loading : function (msg) {
+		var self = this;
+
+		this.running = false;
+		this.msg = msg || '';
+		this.dots = 0;
+
+		this.run = function () {
+			if (!this.running) return;
+			process.stdout.clearLine();
+			process.stdout.cursorTo(0);
+			this.dots = (this.dots + 1) % 4;
+			process.stdout.write(this.msg + new Array(this.dots + 1).join('.'));
+
+			setTimeout(function () { self.run.call(self); }, 200);
+			return this;
+		};
+		this.stop = function (msg) {
+			this.running = false;
+			process.stdout.clearLine();
+			process.stdout.cursorTo(0);
+			process.stdout.write(this.msg + (msg || ''));
+			return this;
+		};
+
+		this.running = true;
+		return this.run();
 	},
 
 
