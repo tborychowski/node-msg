@@ -1,6 +1,6 @@
 /*global module, console, process */
 // jshint -W084
-var MSG = {
+MSG = {
 	black   : function (msg) { return '\x1B[30m' + msg + '\x1B[39m';  },
 	blue    : function (msg) { return '\x1B[34m' + msg + '\x1B[39m';  },
 	bold    : function (msg) { return '\x1B[1m'  + msg + '\x1B[22m';  },
@@ -27,33 +27,56 @@ var MSG = {
 
 	print   : function (msg, colors) { return console.log(MSG.paint(msg, colors)); },
 
-	beep    : function (times) {
-		times = times || 1;
-		while (times--) process.stdout.write('\x07');
-	},
+	beep    : function (times) { times = times || 1; while (times--) process.stdout.write('\x07'); },
 
-	loading : function (msg) {
+	/**
+	 * Show progres indicator
+	 * @param  {String} msg      Message to show before the indicator (must be provided as the line is cleared)
+	 * @param  {object} options  additional settings for the inficator (anim type & speed)
+	 */
+	loading : function (msg, options) {
 		var self = this;
 
 		this.running = false;
-		this.msg = msg || '';
 		this.dots = 0;
+		this.dotsDir = 1;			// going up or down
+
+		this.config = {
+			msg: msg || '',
+			animType: 'up',			// [up | updown | swirl]
+			animSpeed: 200
+		};
+
+		if (typeof options === 'object') {
+			if (options.animType) this.config.animType = options.animType;
+			if (options.animSpeed) this.config.animSpeed = options.animSpeed;
+		}
+
+		this.getDots = function () {
+			if (this.config.animType === 'swirl') return ['|', '/', '-', '\\'][this.dots++ % 4];
+			else if (this.config.animType === 'up') this.dots = (this.dots + 1) % 4;
+			else if (this.config.animType === 'updown') {
+				if (this.dotsDir > 0 && this.dots >= 3) this.dotsDir = -1;
+				else if (this.dotsDir < 0 && this.dots <= 0) this.dotsDir = 1;
+				this.dots += this.dotsDir;
+			}
+			return new Array(this.dots + 1).join('.');
+		};
 
 		this.run = function () {
 			if (!this.running) return;
 			process.stdout.clearLine();
 			process.stdout.cursorTo(0);
-			this.dots = (this.dots + 1) % 4;
-			process.stdout.write(this.msg + new Array(this.dots + 1).join('.'));
-
-			setTimeout(function () { self.run.call(self); }, 200);
+			process.stdout.write(this.config.msg + this.getDots());
+			setTimeout(function () { self.run.call(self); }, this.config.animSpeed);
 			return this;
 		};
 		this.stop = function (msg) {
 			this.running = false;
 			process.stdout.clearLine();
 			process.stdout.cursorTo(0);
-			process.stdout.write(this.msg + (msg || ''));
+			//process.stdout.write(this.config.msg + (msg || ''));
+			console.log(this.config.msg + (msg || ''));
 			return this;
 		};
 
@@ -146,5 +169,4 @@ var MSG = {
 		});
 	}
 };
-
 module.exports = MSG;

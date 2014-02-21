@@ -44,5 +44,15 @@ Msg.table([
 	[ '10', 'String 10 is the longest', '100 KB' ],
 ]);
 
-var loader = new Msg.loading('Loading');
-setTimeout(function () { loader.stop('....OK'); }, 2000);
+Msg.log('\n\nAnd the loader:');
+var loader1 = new Msg.loading('Loading (up)');
+setTimeout(function () { 
+	loader1.stop('........OK'); 
+	var loader2 = new Msg.loading('Loading (up&down)', { animType: 'updown' });
+	setTimeout(function () { 
+		loader2.stop('...OK'); 	
+		var loader3 = new Msg.loading('Loading Swirl.......', { animType: 'swirl' });
+		setTimeout(function () { loader3.stop('OK'); }, 2500);
+	}, 3500);
+}, 2500);
+
