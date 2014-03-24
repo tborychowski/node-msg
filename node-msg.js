@@ -99,6 +99,7 @@ MSG = {
 		var
 		_colPadding = 5,
 		_columnLengths = [],
+		_columnTypes = [],					// array of nums, [ -2, 0, 4 ]; negative = number, 0+ = string
 		_ascSort = (order !== 'DESC'),
 
 		_spaces = function (n, chr) {
@@ -140,13 +141,16 @@ MSG = {
 
 		if (limit) data.splice(limit);
 
-		// calc column widths
+		// calc column widths & types
 		data.forEach(function (row) {
 			row.forEach(function (cell, idx) {
 				if (!_columnLengths[idx]) _columnLengths[idx] = _colPadding;
 				// column padding is ~30% greater than the widest cell (but max 4 spaces)
 				var cellLen = cell.toString().length, pad = Math.min(4, Math.ceil(0.3 * cellLen));
 				_columnLengths[idx] = Math.max(_columnLengths[idx], cellLen + pad);
+
+				_columnTypes[idx] = _columnTypes[idx] || 0;
+				_columnTypes[idx] += (_isNumber(cell) ? -1 : 1);
 			});
 		});
 
@@ -154,7 +158,7 @@ MSG = {
 		data.forEach(function (row) {
 			row.forEach(function (cell, idx) {
 				var cellLen = cell.toString().length;
-				if (_isNumber(cell)) row[idx] = _spaces(_columnLengths[idx] - cellLen) + cell;
+				if (_columnTypes[idx] < 0) row[idx] = _spaces(_columnLengths[idx] - cellLen) + cell;
 				else row[idx] = cell + _spaces(_columnLengths[idx] - cellLen);
 			});
 		});
