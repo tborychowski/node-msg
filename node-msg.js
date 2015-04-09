@@ -76,7 +76,7 @@ MSG = {
 			process.stdout.clearLine();
 			process.stdout.cursorTo(0);
 			//process.stdout.write(this.config.msg + (msg || ''));
-			console.log(this.config.msg + (msg || ''));
+			if (this.config.msg || msg) console.log(this.config.msg + (msg || ''));
 			return this;
 		};
 
