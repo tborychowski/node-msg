@@ -1,6 +1,6 @@
 /*global module, console, process */
 // jshint -W084
-MSG = {
+var MSG = {
 	black   : function (msg) { return '\x1B[30m' + msg + '\x1B[39m';  },
 	blue    : function (msg) { return '\x1B[34m' + msg + '\x1B[39m';  },
 	bold    : function (msg) { return '\x1B[1m'  + msg + '\x1B[22m';  },
@@ -28,6 +28,10 @@ MSG = {
 	print   : function (msg, colors) { return console.log(MSG.paint(msg, colors)); },
 
 	beep    : function (times) { times = times || 1; while (times--) process.stdout.write('\x07'); },
+
+	stripColors: function (str) {
+		return str.toString().replace(/\x1B\[\d+m/g, '');
+	},
 
 	/**
 	 * Show progres indicator
@@ -146,7 +150,7 @@ MSG = {
 			row.forEach(function (cell, idx) {
 				if (!_columnLengths[idx]) _columnLengths[idx] = _colPadding;
 				// column padding is ~30% greater than the widest cell (but max 4 spaces)
-				var cellLen = cell.toString().length, pad = Math.min(4, Math.ceil(0.3 * cellLen));
+				var cellLen = MSG.stripColors(cell).length, pad = Math.min(4, Math.ceil(0.3 * cellLen));
 				_columnLengths[idx] = Math.max(_columnLengths[idx], cellLen + pad);
 
 				_columnTypes[idx] = _columnTypes[idx] || 0;
@@ -157,7 +161,7 @@ MSG = {
 		// update cells with spaces
 		data.forEach(function (row) {
 			row.forEach(function (cell, idx) {
-				var cellLen = cell.toString().length;
+				var cellLen = MSG.stripColors(cell).length;
 				if (_columnTypes[idx] < 0) row[idx] = _spaces(_columnLengths[idx] - cellLen) + cell;
 				else row[idx] = cell + _spaces(_columnLengths[idx] - cellLen);
 			});
@@ -173,4 +177,5 @@ MSG = {
 		});
 	}
 };
+
 module.exports = MSG;
