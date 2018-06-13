@@ -2,11 +2,12 @@
   "name": "node-msg",
   "version": "1.2.2",
   "description": "node msg logger/formatter with colours",
-  "author": { "name": "Tom" },
+  "author": "Tom",
   "main": "node-msg",
-  "dependencies": {},
-  "engines": { "node": ">=0.8.0" },
   "keywords": [ "log", "msg", "message", "formatter" ],
-  "licenses": [ { "type": "MIT", "url": "https://raw.github.com/tborychowski/node-msg/master/LICENSE" } ],
-  "repository": { "type": "git", "url": "https://github.com/tborychowski/node-msg.git" }
+  "license": "GPL-3.0-or-later",
+  "repository": { 
+    "type": "git", 
+    "url": "https://github.com/tborychowski/node-msg.git" 
+  }
 }
